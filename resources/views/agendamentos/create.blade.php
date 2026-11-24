@@ -4,9 +4,9 @@
   <script src="{{asset('/js/app.js')}}"></script>
 @endsection('javascripts_bottom')
 
-@section('styles')
+{{-- @section('styles')
     <link rel="stylesheet" type="text/css" href="{{asset('/css/agendamentos.css')}}">
-@endsection('styles')
+@endsection('styles') --}}
 
 @section('content')
     @include('flash')
