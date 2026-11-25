@@ -9,6 +9,6 @@
 @endsection('styles') --}}
 
 @section('content')
-@include('flash')
+    @include('flash')
         @include('agendamentos.partials.form')
 @endsection('content')
