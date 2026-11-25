@@ -11,21 +11,6 @@ class ProfExternoCrudTest extends DuskTestCase
 {
     use DatabaseTruncation;
 
-    protected function loginSenhaUnica(Browser $browser, int $codpes = 111111): void
-    {
-        $browser->visit('/');
-
-        if ($browser->element('a[href*="logout"], button:contains("Sair")')) {
-            return;
-        }
-
-        $browser->clickLink('Entrar')
-            ->waitForText('Senhaunica-faker')
-            ->type('loginUsuario', (string) $codpes)
-            ->press('Login')
-            ->waitForText('Sair');
-    }
-
     public function test_create_professor_externo(): void
     {
         $cpf = fake('pt_BR')->cpf();

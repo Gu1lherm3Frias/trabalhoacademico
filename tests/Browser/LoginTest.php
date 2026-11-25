@@ -12,7 +12,10 @@ class LoginTest extends DuskTestCase
 
     public function test_user_login_and_logout_via_senhaunica(): void
     {
+        
         $this->browse(function (Browser $browser) {
+            $this->logoutSenhaUnica($browser);
+
             $browser->visit('/')
                 ->clickLink('Entrar')
                 ->waitForText('Senhaunica-faker')
